@@ -1,16 +1,26 @@
 #include <iostream>
 
+using namespace std;
+
 int main()
+
 {
-	char a[20];
-	char b[20];
+	
+	char name[100];
+		
+	cout << "Enter your name (first and last)." << endl;
+	
+	cin.getline(name, 100);
+	
+		for (int a = strlen(name); a >= 0; a--)
 
-	strlen(a);
-	strlen(b);
-
-	std::cout << "Enter your first and last name." << std::endl;
-	std::cin >> a >> b;
-	std::cout << b << ", " << a << std::endl;
-
+		{
+			cout << name[a];
+		}
+	
+		cout << endl;
+	
 	system("pause");
+	
+	return 0;
 }

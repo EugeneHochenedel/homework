@@ -1,23 +1,37 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
-	
-	
-	char a[20];
-	char b[20];
-	char c[20];
-	char d[20];
-	char e[20];
 
-	strlen(a);
-	strlen(b);
-	strlen(c);
-	strlen(d);
-	strlen(e);
+	const int totalNames = 5;
+	
+	char names[totalNames][100];
 
-	std::cin >> a >> b >> c >> d >> e;
-	std::cout << e << " " << d << " " << c << " " << b << " " << a << std::endl;
+	char name[100];
+
+	cout << "Enter five names ( w/ first and last)." << endl;
+
+	for (int a = 0; a < totalNames; a++) 
+	{
+		cin.getline(name, 100);
+		
+		for (int b = 0; b < 100; b++) 
+		{
+			names[a][b] = name[b];
+		}
+	}
+	
+	for (int a = 0; a < totalNames; a++) 
+	{
+		
+		for (int b = strlen(names[a]); b >= 0; b--)
+		{
+			cout << names[a][b];
+		}
+
+		cout << endl;
+	}
 
 	system("pause");
 }

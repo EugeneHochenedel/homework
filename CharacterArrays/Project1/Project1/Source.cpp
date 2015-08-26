@@ -1,13 +1,14 @@
 #include <iostream>
+using namespace std;
 
 int main()
 {
-	char a[20];
-	char b[20];
+	char a[40];
 
-	std::cout << "Enter your first and last name." << std::endl;
-	std::cin >> a >> b;
-	std::cout << a << " " << b << std::endl;
+	cout << "Enter your name (first and last)." << endl;
 
+	cin.getline(a, 20);
+
+	cout << a << endl;
 	system("pause");
 }
